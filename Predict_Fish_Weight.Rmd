@@ -51,15 +51,36 @@ Whitefish <- select(Whitefish, -Species)
 
 ## Perch
 
+```{r}
+Perchwtall=lm(Weight~.-Weight,data=Perch)
+summary.lm(Perchwtall)
+library(leaps)
+best_subsets <- regsubsets(Weight ~ . - Weight, data = Perch, nbest = 1)
+summary_best_subsets <- summary(best_subsets)
+summary_best_subsets$outmat
+print(summary_best_subsets$outmat)
+```
+The adjusted rsquared is 0.9372
 ### Best Models
-
+The best models are all the variables 
 ### Best Two regressor model
-
+The model using height and widt are the best two regressors.
 
 ## Pike
 
-### Best Models
+```{r}
+Perchwtall=lm(Weight~.-Weight,data=Pike)
+summary.lm(Perchwtall)
+library(leaps)
+best_subsets <- regsubsets(Weight ~ . - Weight, data = Pike, nbest = 1)
+summary_best_subsets <- summary(best_subsets)
+summary_best_subsets$outmat
+print(summary_best_subsets$outmat)
+```
 
+The adjusted rsquared is 0.9794
+### Best Models
+The best models are all the variables
 ### Best Two regressor model
 
 ## Roach
