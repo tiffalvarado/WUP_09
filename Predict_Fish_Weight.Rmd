@@ -82,11 +82,22 @@ The adjusted rsquared is 0.9794
 ### Best Models
 The best models are all the variables
 ### Best Two regressor model
-
+The best two regressors models are Length1 and Length3
 ## Roach
 
+```{r}
+Perchwtall=lm(Weight~.-Weight,data=Roach)
+summary.lm(Perchwtall)
+library(leaps)
+best_subsets <- regsubsets(Weight ~ . - Weight, data = Roach, nbest = 1)
+summary_best_subsets <- summary(best_subsets)
+summary_best_subsets$outmat
+print(summary_best_subsets$outmat)
+```
+The adjusted rsquared is 0.821.
 ### Best Models
-
+The best two models are all the variables.
 ### Best Two regressor model
-
+The best two models are Length1 and Length3
 ## Final Summary Statements
+in conclusion the helper file used is bestsubset regression the best regression model for perch was height and width the best regression model for pike was length1 and length3 the best regression model for roads were length3 and width
