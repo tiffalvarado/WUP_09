@@ -100,4 +100,4 @@ The best two models are all the variables.
 ### Best Two regressor model
 The best two models are Length1 and Length3
 ## Final Summary Statements
-in conclusion the helper file used is bestsubset regression the best regression model for perch was height and width the best regression model for pike was length1 and length3 the best regression model for roads were length3 and width
+in conclusion the helper file used is bestsubset regression the best regression model for perch was height and width the best regression model for pike was length1 and length3 the best regression model for roads were length3 and width.
